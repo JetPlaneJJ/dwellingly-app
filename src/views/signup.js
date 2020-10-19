@@ -66,8 +66,8 @@ const SignupForm = ({ history }) => {
     confirmPassword: Yup.string()
       .required("Password confirmation is required")
       .oneOf([Yup.ref("password"), null],
-      "Passwords must match"
-    ),
+        "Passwords must match"
+      ),
   });
 
   const handleClick = () => {
@@ -80,7 +80,7 @@ const SignupForm = ({ history }) => {
         user.isAuthenticated
           ? <Redirect to="/dashboard" />
           : (
-            <div className="signup__container">
+            <div className="login__container">
               <Formik
                 validationSchema={validationSchema}
                 initialValues={{
@@ -99,122 +99,119 @@ const SignupForm = ({ history }) => {
                 enableReinitialize
               >
                 {
-            () => (
-              <div className="signup__form-container">
-                <div className="signup__mobile-header">
-                  <header className="navbar bg-gradient">
-                    <Link className="navbar-item" id="header-logo" to="/">
-                      <img src={dwellinglyLogoMobile} alt="dwellingly logo" />
-                    </Link>
-                  </header>
-                </div>
-                <Form className="signup__form-field-container">
-                  <img className="signup__logo" src={dwellinglyLogo} alt="Dwellingly Logo" />
-                  <h2 className="signup__subtitle">
-                    Create an Account
-                  </h2>
-                  <h2 className="section-title signup__mobile-heading">
-                    Create an Account for Dwelling.ly
-                  </h2>
-
-
-                  <div className="signup__form-cell-container">
-                    <Field
-                      className="form-field signup__form-field"
-                      type="text"
-                      name="firstName"
-                      placeholder="First Name"
-                      required
-                    />
-
-                    <ErrorMessage className="form-error" name="firstName" component="div" />
-                  </div>
-
-
-                  <div className="signup__form-cell-container"> 
-                    <Field
-                      className="form-field signup__form-field"
-                      type="text"
-                      name="lastName"
-                      placeholder="Last Name"
-                      required
-                    />
-
-                    <ErrorMessage className="form-error" name="lastName" component="div" />
-                  </div>
-
-                  <div className="signup__form-cell-container"> 
-                    <Field
-                      className="form-field signup__form-field"
-                      type="text"
-                      name="email"
-                      placeholder="Email"
-                      required
-                    />
-
-                    <ErrorMessage className="form-error" name="email" component="div" />
-                  </div>
-
-                  <div className="signup__form-cell-container"> 
-                    <Field
-                      className="form-field signup__form-field"
-                      type="text"
-                      id="phone"
-                      name="phone"
-                      placeholder="Phone"
-                      required
-                    />
-
-                    <ErrorMessage className="form-error" name="phone" component="div" />
-                  </div>
-
-                  <div className="signup__form-cell-container"> 
-                    <Field
-                      className="form-field signup__form-field"
-                      type="password"
-                      name="password"
-                      placeholder="Password"
-                      required
-                    />
-
-                    <ErrorMessage className="form-error" name="password" component="div" />
-                  </div>
-
-                  <div className="signup__form-cell-container"> 
-                    <Field
-                      className="form-field signup__form-field"
-                      type="password"
-                      name="confirmPassword"
-                      placeholder="Confirm Password"
-                      required
-                    />
-
-                    <ErrorMessage className="form-error" name="confirmPassword" component="div" />
-                  </div>
-                </Form>
-                <div className="signup__button-section">
-                    <button className="signup__button" type="submit">
-                      SIGN UP
-                    </button>
-                    <div className="signup__or_container">
-                      <div className="signup__or">
-                        <span className="signup__divider" />
-                        <span className="signup__or_text">
-                          OR
-                        </span>
+                  () => (
+                    <div className="login__form-container">
+                      <div className="login__mobile-header">
+                        <header className="navbar bg-gradient">
+                          <Link className="navbar-item" id="header-logo" to="/">
+                            <img src={dwellinglyLogoMobile} alt="dwellingly logo" />
+                          </Link>
+                        </header>
                       </div>
-                    </div>
-                  <button
-                    className="login__button"
-                    type="button"
-                    onClick={handleClick}>
-                    LOG IN
+                      <Form className="login__form-field-container">
+                        <img className="login__logo" src={dwellinglyLogo} alt="Dwellingly Logo" />
+                        <h2 className="login__subtitle">
+                          Create an Account
+                  </h2>
+                        <h2 className="section-title login__mobile-heading">
+                          Create an Account for Dwelling.ly
+                  </h2>
+
+                  <div className="login__form-cell-container">
+                          <Field
+                            className="form-field login__form-field"
+                            type="text"
+                            name="firstName"
+                            placeholder="First Name"
+                            required
+                          />
+                          <ErrorMessage className="form-error" name="firstName" component="div" />
+                        </div>
+
+                        <div className="login__form-cell-container">
+                          <Field
+                            className="form-field login__form-field"
+                            type="text"
+                            name="lastName"
+                            placeholder="Last Name"
+                            required
+                          />
+
+                          <ErrorMessage className="form-error" name="lastName" component="div" />
+                        </div>
+
+                        <div className="login__form-cell-container">
+                          <Field
+                            className="form-field login__form-field"
+                            type="text"
+                            name="email"
+                            placeholder="Email"
+                            required
+                          />
+
+                          <ErrorMessage className="form-error" name="email" component="div" />
+                        </div>
+
+                        <div className="login__form-cell-container">
+                          <Field
+                            className="form-field login__form-field"
+                            type="text"
+                            id="phone"
+                            name="phone"
+                            placeholder="Phone"
+                            required
+                          />
+
+                          <ErrorMessage className="form-error" name="phone" component="div" />
+                        </div>
+
+                        <div className="login__form-cell-container">
+                          <Field
+                            className="form-field login__form-field"
+                            type="password"
+                            name="password"
+                            placeholder="Password"
+                            required
+                          />
+
+                          <ErrorMessage className="form-error" name="password" component="div" />
+                        </div>
+
+                        <div className="login__form-cell-container">
+                          <Field
+                            className="form-field login__form-field"
+                            type="password"
+                            name="confirmPassword"
+                            placeholder="Confirm Password"
+                            required
+                          />
+
+                          <ErrorMessage className="form-error" name="confirmPassword" component="div" />
+                        </div>
+                      </Form>
+                      <div className="login__button-section">
+                        <button className="login__button" type="submit">
+                          SIGN UP
+                    </button>
+                        <div className="login__or_container">
+                          <div className="login__or">
+                            <span className="login__divider" />
+                            <span className="login__or_text">
+                              OR
+                        </span>
+                          </div>
+                        </div>
+                        <button
+                          className="login__button"
+                          type="button"
+                          onClick={handleClick}>
+                          LOG IN
                   </button>
-                </div>
-                <div className="signup__privacyPolicyWrapper"> <Link to="/privacypolicy" className="signup__privacyPolicyText">Privacy Policy</Link></div>
-              </div>
-            )
-          }
+                      </div>
+                      <div className="login__privacyPolicyWrapper"> <Link to="/privacypolicy" className="login__privacyPolicyText">Privacy Policy</Link></div>
+                    </div>
+                  )
+                }
               </Formik>
             </div>
           )
