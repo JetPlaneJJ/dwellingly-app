@@ -9,7 +9,6 @@ import GoogleButton from '../components/GoogleButton';
 export class LoginForm extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       email: undefined,
       password: undefined
@@ -39,6 +38,7 @@ export class LoginForm extends React.Component {
                     <>
                       <Form className="login__form-container">
                         <img className="login__logo" src={dwellinglyLogo} alt="Dwellingly Logo"></img>
+                        
                         <Field
                           className="form-field login__form-field"
                           type="text"
@@ -55,6 +55,7 @@ export class LoginForm extends React.Component {
                           placeholder="Password"
                           required
                         />
+                        
                         <div className="login__button-section">
                           <button className="login__button" type="submit">LOG IN</button>
                           <div className="login__or_container">
