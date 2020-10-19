@@ -55,12 +55,13 @@ export class LoginForm extends React.Component {
                           placeholder="Password"
                           required
                         />
-                        <div></div>
-                        <button className="login__button" type="submit">LOG IN</button>
-                        <div className="login__or_container">
-                          <div className="login__or">
-                            <span className="login__divider"></span>
-                            <span className="login__or_text">OR</span>
+                        <div className="login__button-section">
+                          <button className="login__button" type="submit">LOG IN</button>
+                          <div className="login__or_container">
+                            <div className="login__or">
+                              <span className="login__divider"></span>
+                              <span className="login__or_text">OR</span>
+                            </div>
                           </div>
                         </div>
                         <GoogleButton innerText={"LOG IN WITH GOOGLE"}/>

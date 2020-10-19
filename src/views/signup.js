@@ -191,26 +191,26 @@ const SignupForm = ({ history }) => {
 
                     <ErrorMessage className="form-error" name="confirmPassword" component="div" />
                   </div>
-
-                  <div />
-                  <button className="signup__button" type="submit">
-                    SIGN UP
-                  </button>
-                  <div className="signup__or_container">
-                    <div className="signup__or">
-                      <span className="signup__divider" />
-                      <span className="signup__or_text">
-                        OR
-                      </span>
-                    </div>
-                  </div>
                 </Form>
-                <button
-                  className="login__button"
-                  type="button"
-                  onClick={handleClick}>
-                  LOG IN
-                </button>
+                <div className="signup__button-section">
+                    <button className="signup__button" type="submit">
+                      SIGN UP
+                    </button>
+                    <div className="signup__or_container">
+                      <div className="signup__or">
+                        <span className="signup__divider" />
+                        <span className="signup__or_text">
+                          OR
+                        </span>
+                      </div>
+                    </div>
+                  <button
+                    className="login__button"
+                    type="button"
+                    onClick={handleClick}>
+                    LOG IN
+                  </button>
+                </div>
                 <div className="signup__privacyPolicyWrapper"> <Link to="/privacypolicy" className="signup__privacyPolicyText">Privacy Policy</Link></div>
               </div>
             )
